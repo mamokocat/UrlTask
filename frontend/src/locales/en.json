@@ -1,0 +1,19 @@
+{
+    "createNew": "Create new TinyUrl",
+    "shortUrl": "Short Url",
+    "fullUrl": "Full Url",
+    "visitCount": "Visit Count",
+    "createdDate": "Created Date",
+    "edit": "Edit",
+    "delete": "Delete",
+    "loadMore": "Load more",
+    "redirecting": "Redirecting...",
+    "notValidUrl": "Please enter valid URL",
+    "relativePath": "Relative Path:",
+    "redirectUrl": "Redirect Url",
+    "randomGeneration": "Random generation",
+    "urlExample": "Your url will look like this: ",
+    "saveChanges": "Save changes",
+    "addUrl": "Add Url",
+    "editUrl": "Edit Url"
+}
