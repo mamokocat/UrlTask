@@ -19,8 +19,10 @@ export default {
             return response.data
         })
     },
-    validatePath(path) {
-        return instance.get(`/urls/validatePath?path=${path}`)
+    validatePath(path, isEditMode) {
+        // eslint-disable-next-line
+        debugger
+        return instance.get(`/urls/validatePath?path=${path}&isEditMode=${isEditMode}`)
     },
     addUrl(url) {
         return instance.put("/urls", url)

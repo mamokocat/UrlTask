@@ -86,14 +86,14 @@ namespace TinyUrl.Services.Services
             }
         }
 
-        public async Task<Result<List<string>>> ValidatePathAsync(string path)
+        public async Task<Result<List<string>>> ValidatePathAsync(string path, bool isEdit)
         {
             using (var context = new TinyUrlDbContext(databaseConfiguration.TinyUrlDb))
             {
                 var errors = new List<string>();
                 var result = await context.Urls.FirstOrDefaultAsync(url => url.RelativePath == path);
 
-                if (result is not null)
+                if (!isEdit && result is not null)
                 {
                     errors.Add(ValidationErrors.DuplicatePath);
                 }

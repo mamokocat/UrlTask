@@ -65,7 +65,7 @@
     watch(relativePath, _.debounce(async () => {
         relativePathValidationErrors.value = []
         if(relativePath.value) {
-            await urlApiService.validatePath(relativePath.value).then((response) => {
+            await urlApiService.validatePath(relativePath.value, isEdit.value).then((response) => {
                 isRelativePathValid.value = response.data.isValid;
 
                 relativePathValidationErrors.value = response.data.validationErrors

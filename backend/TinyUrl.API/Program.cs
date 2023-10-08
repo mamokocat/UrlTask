@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using TinyUrl.API.Mappers;
 using TinyUrl.Common.Configuration.Interfaces;
 using TinyUrl.Common.Configuration.Models;
@@ -23,7 +22,7 @@ builder.Services.AddSingleton<IDatabaseConfiguration>((_) => builder.Configurati
 builder.Services.AddDbContext<TinyUrlDbContext>(options =>
 {
     var connetionString = builder.Configuration.GetConnectionString("DefaultConnection");
-    options.UseMySql(connetionString, ServerVersion.AutoDetect(connetionString));
+    options.UseMySql(connetionString, new MySqlServerVersion(new Version(11, 1, 2)));
 });
 
 

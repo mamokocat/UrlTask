@@ -17,6 +17,6 @@ namespace TinyUrl.Services.Interfaces
 
         public Task<Result<List<string>>> EditAsync(IAddEditViewModel model, int id);
 
-        public Task<Result<List<string>>> ValidatePathAsync(string path);
+        public Task<Result<List<string>>> ValidatePathAsync(string path, bool isEdit);
     }
 }

@@ -43,10 +43,10 @@ namespace TinyUrl.API.Controllers
         }
 
         [HttpGet("validatePath")]
-        public async Task<IActionResult> ValidatePathAsync(string path)
+        public async Task<IActionResult> ValidatePathAsync(string path, bool isEditMode)
         {
 
-            Result<List<string>> result = await urlService.ValidatePathAsync(path);
+            Result<List<string>> result = await urlService.ValidatePathAsync(path, isEditMode);
 
 
             return this.Ok(mapper.MapValidationResult(result));
