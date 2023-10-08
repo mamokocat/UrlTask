@@ -7,7 +7,7 @@ import NotFound from './views/NotFound'
 
 var routes = [
     { path: "/:path", component: RedirectPage, props: true },
-    { path: "/urls", component: UrlList },
+    { path: "/", component: UrlList },
     { path: "/urls/:id(\\d+|add)", component: AddEditPage, props: true },
     { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound }
 ]
