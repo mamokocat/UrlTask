@@ -7,7 +7,7 @@ npm install
 
 install [chocolatey](https://chocolatey.org/install#individual)
 
-install mkcert[mkcert](https://github.com/FiloSottile/mkcert) by using commands below (with admin rights):
+install [mkcert](https://github.com/FiloSottile/mkcert) by using commands below (with admin rights):
 ```
 choco install mkcert
 mkcert -install
